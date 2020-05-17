@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip Path - Material Design</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 class="title">
+       Material Design transitions using
+        <p>
+            Clip Path
+        </p>
+    </h1>
+   <main>
+       <div class="list-item">
+           <button class="ripple">
+               Button
+           </button>
+           <section class="card">
+               <div class="content">
+                   <span>i</span>
+                   <h1>Awesome!</h1>
+                   <p>This card uses clip path. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae debitis maxime commodi placeat atque numquam</p>
+                   <button class="ripple">
+                       BUTTON
+                   </button>
+               </div>
+           </section>
+
+       </div>
+       <div class="list-item">
+           <p>Some text</p>
+           <section class="card">
+               <div class="content">
+                   <span>i</span>
+                   <h1>Cute!</h1>
+                   <p>This card uses clip path. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae debitis maxime commodi placeat atque numquam</p>
+                   <button class="ripple">
+                       BUTTON
+                   </button>
+               </div>
+           </section>
+       </div>
+       <div class="list-item">
+           <button class="ripple">
+               ripple
+           </button>
+           <section class="card">
+               <div class="content">
+                   <span>i</span>
+                   <h1>Wow!</h1>
+                   <p>This card uses clip path. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae debitis maxime commodi placeat atque numquam</p>
+                   <button class="ripple">
+                       BUTTON
+                   </button>
+               </div>
+           </section>
+       </div>
+       <div class="list-item">
+           <div>
+               <button class="ripple">
+                   push
+               </button>
+               <button class="ripple">
+                   me
+               </button>
+           </div>
+           <section class="card">
+               <div class="content">
+                   <span>i</span>
+                   <h1>Yeah!</h1>
+                   <p>This card uses clip path. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae debitis maxime commodi placeat atque numquam</p>
+                   <button class="ripple">
+                       BUTTON
+                   </button>
+               </div>
+           </section>
+       </div>
+   </main>
+
+   <script type="text/javascript">
+       //Manage z-index of each card
+       const listItems = document.querySelectorAll(".list-item .content");
+       const reverseList = [];
+       listItems.forEach(item => reverseList.unshift(item));
+       reverseList.forEach((item, index) => item.style.zIndex = `${index + 1}`)
+   </script>
+
+</body>
+</html>

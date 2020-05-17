@@ -1,2 +1,4 @@
-# ClipPath_MaterialDesign
-Material Design transition using clip-path
+# Material Design/Clip-path transitions in css  
+Material Design transitions using css clip-path
+
+![cbc-cervantes]()

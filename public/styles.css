@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap');
+body{
+    margin: 0;
+    background-color: rgba(237, 237, 237, 0.44);
+    padding:0;
+    min-height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main {
+    display: grid;
+    justify-items: center;
+    grid-gap: 1px;
+    width: 90%;
+    max-width: 550px;
+    min-width: 350px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.1);
+    background-color: #eeeef2;
+    transition: all .3s;
+    border-radius: 10px;
+}
+main:hover {
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.2);
+
+}
+.title{
+    width: 80%;
+    text-align: center;
+    color: black;
+    margin-bottom: 40px;
+}
+.title p{
+    margin: 0;
+    font-size: 37px;
+    font-weight: 600;
+    color: #e91e63;
+}
+
+/* LIST ITEMS */
+.list-item{
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    background-color: white;
+    box-sizing: border-box;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.list-item:first-child{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.list-item:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* CARD ELEMENTS */
+.card {
+    height: 24px;
+    width: 24px;
+}
+.card .content{
+    right: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: #355070 ;
+    width: calc(100% - 20px);
+    max-width: 350px;
+    padding: 17px;
+    color:white;
+    margin-top: -11px;
+    font-weight: 400;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px 0 #8e8e8e;
+    border-radius: 10px;
+
+
+    /* CLIP PATH */
+    clip-path: circle(5% at 95% 23px);
+    /* transition */
+    transition: clip-path .6s ease;
+}
+.card .content:hover{
+    /* Transition effect*/
+    clip-path: circle(100%);
+}
+.card .content h1{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.card .content p{
+    letter-spacing: 0.3px;
+}
+.card .content span {
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+}
+
+/*BUTTONS*/
+button {
+    user-select: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: #02c39a;
+    color: white;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0 2px;
+}
+
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+
+.ripple:hover {
+    background-color: #029c74;
+    background-image: radial-gradient(circle, transparent 1%, #029c74 1%);
+    background-position: center;
+    background-size: 15000%;
+}
+
+.ripple:active {
+    transition: background 0s;
+    background-color: #02c39a;
+    background-size: 100%;
+}
